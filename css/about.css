@@ -1,0 +1,81 @@
+/* ABOUT PAGE LAYOUT */
+main {
+  max-width: 1000px;
+}
+
+h2 {
+  color: chocolate;
+  text-decoration: underline;
+}
+
+article {
+  margin-top: 70px;
+}
+
+.flex-parent {
+  display: flex;
+  /* background-color: red; */
+}
+
+.flex-parent > * {
+  flex: 1;
+}
+
+.first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  padding: 10px;
+  background-color: chocolate;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  outline: 1px solid white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.second-child img {
+  border-radius: 4px;
+}
+
+article img {
+  width: 300px;
+  height: auto;
+}
+
+p {
+  text-align: justify;
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    text-align: center;
+  }
+  .flex-parent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .second-child {
+    justify-content: center;
+  }
+
+  .buttonParent {
+    text-align: center;
+  }
+}

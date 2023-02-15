@@ -1,0 +1,68 @@
+main {
+  max-width: 1000px;
+}
+
+h2 {
+  text-align: center;
+  color: chocolate;
+  text-decoration: underline;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+h4 {
+  color: chocolate;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.projects > * {
+  flex: 1;
+}
+
+.project {
+  outline: 1px solid chocolate;
+}
+
+.project .parentImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project img {
+  width: 450px;
+}
+
+.buttonParent {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+p {
+  text-align: left;
+}
