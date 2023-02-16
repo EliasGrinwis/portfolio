@@ -17,6 +17,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  max-height: 100vh;
 }
 
 main {
@@ -25,6 +26,8 @@ main {
   padding-bottom: 10px;
   max-width: 800px;
   margin: auto;
+  display: block;
+  overflow: hidden;
 }
 
 h1 {
@@ -53,9 +56,18 @@ a {
   font-weight: bold;
 }
 
+.article-index {
+  margin: auto;
+  max-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
 article {
   margin: auto;
-  margin-top: 100px;
 }
 
 p {
@@ -83,4 +95,10 @@ p {
   padding: 15px;
   border: 2px solid chocolate;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .article-index {
+    max-width: 1000px;
+  }
 }

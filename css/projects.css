@@ -2,6 +2,10 @@ main {
   max-width: 1000px;
 }
 
+article {
+  max-width: 1000px;
+}
+
 h2 {
   text-align: center;
   color: chocolate;
@@ -86,5 +90,15 @@ video {
 
   .project {
     margin-bottom: 75px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .index-article {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
