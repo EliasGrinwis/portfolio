@@ -10,6 +10,7 @@ h2 {
 
 article {
   max-width: 1000px;
+  width: 90%;
 }
 
 .flex-parent {

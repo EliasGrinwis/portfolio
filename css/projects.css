@@ -4,6 +4,7 @@ main {
 
 article {
   max-width: 1000px;
+  width: 90%;
 }
 
 h2 {
