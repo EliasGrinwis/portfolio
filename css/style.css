@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   background-color: #100e17;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/achtergrond.jpg") center center no-repeat fixed;
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,6 +22,7 @@ body {
 main {
   padding-right: 10px;
   padding-left: 10px;
+  padding-bottom: 10px;
   max-width: 800px;
   margin: auto;
 }
@@ -53,7 +54,8 @@ a {
 }
 
 article {
-  margin-top: 35px;
+  margin: auto;
+  margin-top: 100px;
 }
 
 p {
@@ -65,6 +67,14 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.socials i {
+  transition: all 0.4s ease-in-out;
+}
+
+.socials i:hover {
+  transform: scale(1.2);
 }
 
 .socials i {

@@ -41,11 +41,12 @@ button {
   border-radius: 10px;
   font-size: 18px;
   color: white;
-  outline: 1px solid white;
+  transition: all 0.5s;
 }
 
 button:hover {
   cursor: pointer;
+  transform: translateY(-8px);
 }
 
 .second-child img {
