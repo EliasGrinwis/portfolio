@@ -36,26 +36,6 @@ h1 {
   color: white;
 }
 
-header nav ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  gap: 6rem;
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-  color: white;
-}
-
-header nav ul li a {
-  color: chocolate;
-}
-
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
 .article-index {
   margin: auto;
   max-width: 800px;
@@ -97,8 +77,112 @@ p {
   border-radius: 50%;
 }
 
+.hamburger {
+  display: none;
+}
+
+.cross {
+  display: none;
+}
+
+.flex-direction {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 @media screen and (max-width: 992px) {
   .article-index {
     max-width: 1000px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    display: none;
+    background-color: chocolate;
+    max-width: 350px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+
+  nav ul {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  nav ul li {
+    margin: 20px;
+  }
+
+  nav ul li a {
+    color: black;
+    font-size: 35px;
+    text-decoration: none;
+  }
+
+  .cross {
+    font-size: 35px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: block;
+    color: chocolate;
+    font-size: 38px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .article-index {
+    max-width: 1000px;
+  }
+
+  nav {
+    display: block !important;
+  }
+
+  nav ul li {
+    margin: 20px;
+  }
+
+  nav ul li a {
+    color: black !important;
+    font-size: 22px;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+
+  .cross {
+    display: none !important;
+  }
+
+  header nav ul {
+    display: flex !important;
+    list-style-type: none !important;
+    justify-content: center !important;
+    gap: 6rem !important;
+    padding: 0 !important;
+    color: white !important;
+  }
+
+  header nav ul li a {
+    color: chocolate !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    font-weight: bold !important;
   }
 }
