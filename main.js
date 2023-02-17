@@ -8,15 +8,13 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
   value = "ON";
   hamburger.style.display = "none";
-
   nav.style.display = "block";
-
-  ul.classList.add("flex-direction");
   document.querySelector(".cross").style.display = "block";
+  document.querySelector(".article-index").classList.add("blur");
 });
 
 document.querySelector(".cross").addEventListener("click", () => {
-  nav.style.display = "none";
   hamburger.style.display = "block";
-  ul.classList.remove("flex-direction");
+  nav.style.display = "none";
+  document.querySelector(".article-index").classList.remove("blur");
 });
