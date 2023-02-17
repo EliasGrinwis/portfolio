@@ -1,0 +1,116 @@
+/* Write CSS Here */
+
+.test {
+  max-width: 1000px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full {
+  display: flex;
+  min-height: 100vh;
+}
+.left {
+  background-color: black;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  outline: 1px solid chocolate;
+
+  box-shadow: chocolate 0px 30px 70px -20px,
+    rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
+}
+
+.left ul li {
+  font-size: 16px;
+}
+
+.right {
+  background-color: chocolate;
+  filter: brightness(90%);
+  outline: 1px solid chocolate;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: chocolate 0px 30px 70px -20px,
+    rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
+}
+.image,
+.Contact,
+.Skills,
+.Language,
+.Hobbies,
+.title,
+.Summary,
+.Experience,
+.Education,
+.project {
+  margin-bottom: 30px;
+}
+.h2 {
+  background-color: rgb(4, 96, 150);
+}
+
+.Contact p {
+  display: flex;
+  gap: 1rem;
+}
+
+.Contact,
+.Skills,
+.Language,
+.Hobbies {
+  color: white !important;
+}
+
+.title p {
+  text-align: center;
+}
+
+.Summary h2,
+.Summary p {
+  color: black;
+}
+
+.Experience h2 {
+  color: black;
+}
+
+.Education h2 {
+  color: black;
+}
+
+@media screen and (max-width: 992px) {
+  .full {
+    margin-top: 100px;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .full ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .full p {
+    text-align: center;
+  }
+
+  .Contact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .full {
+    margin-top: 250px;
+  }
+}

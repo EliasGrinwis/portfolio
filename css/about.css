@@ -1,6 +1,17 @@
 /* ABOUT PAGE LAYOUT */
+
+html {
+  scroll-behavior: smooth !important;
+  overflow-y: scroll !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 main {
   max-width: 1000px;
+  height: 100vh;
 }
 
 h2 {
@@ -39,6 +50,7 @@ article {
 button {
   padding: 10px;
   background-color: chocolate;
+  filter: brightness(90%);
   border-radius: 10px;
   font-size: 18px;
   color: white;
@@ -64,6 +76,28 @@ p {
   color: white;
 }
 
+.arrowParent {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 20px;
+}
+
+.arrowParent:hover {
+  cursor: pointer;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 @media screen and (max-width: 992px) {
   h2 {
     text-align: center;
@@ -85,14 +119,20 @@ p {
     margin-top: 50px;
     padding-bottom: 20px;
   }
+
+  .arrow {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 992px) {
   article {
     width: 100%;
+    /* background-color: green; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
   }
 }
