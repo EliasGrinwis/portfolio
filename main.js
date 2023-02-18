@@ -1,20 +1,10 @@
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
-const ul = document.querySelector(".ul");
+const toggleBtn = document.querySelector(".toggle_btn");
+const toggleBtnIcon = document.querySelector(".toggle_btn i");
+const dropDownMenu = document.querySelector(".dropdown_menu");
 
-let value = "OFF";
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle("open");
+  const isOpen = dropDownMenu.classList.contains("open");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
-  value = "ON";
-  hamburger.style.display = "none";
-  nav.style.display = "block";
-  document.querySelector(".cross").style.display = "block";
-  document.querySelector(".article-index").classList.add("blur");
-});
-
-document.querySelector(".cross").addEventListener("click", () => {
-  hamburger.style.display = "block";
-  nav.style.display = "none";
-  document.querySelector(".article-index").classList.remove("blur");
-});
+  toggleBtn.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+};

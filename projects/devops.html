@@ -5,23 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/projects.css" />
   </head>
   <body>
+    <header>
+      <h1>Mijn portfolio</h1>
+      <nav class="navbar">
+        <ul class="links">
+          <li class="action_btn">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="action_btn">
+            <a href="../about.html">Over mij</a>
+          </li>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="../projects.html">Projecten</a>
+          </li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <div class="dropdown_menu">
+        <ul>
+          <li class="action_btn"><a href="../index.html">Home</a></li>
+          <li class="action_btn">
+            <a href="../about.html">Over mij</a>
+          </li>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="../projects.html">Projecten</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <main>
-      <header>
-        <h1>Mijn portfolio</h1>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">Over mij</a></li>
-            <li style="text-decoration: underline">
-              <a href="../projects.html">Projecten</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <article>
         <h2>DevOps (ASP.NET WEB APP)</h2>
         <div>
@@ -42,14 +69,16 @@
           </p>
 
           <h4>Youtube video</h4>
-          <video controls>
-            <source
-              src="../videos/DevOps Contentful (Twitter Followers).mp4"
-              type="video/mp4"
-            />
-            Installeer een nieuwere versie van je browser als je deze video wilt
-            bekijken.
-          </video>
+          <div>
+            <video controls>
+              <source
+                src="../videos/DevOps Contentful (Twitter Followers).mp4"
+                type="video/mp4"
+              />
+              Installeer een nieuwere versie van je browser als je deze video
+              wilt bekijken.
+            </video>
+          </div>
 
           <h4>Besluit</h4>
           <p>
@@ -63,5 +92,7 @@
         </div>
       </article>
     </main>
+
+    <script src="../main.js"></script>
   </body>
 </html>

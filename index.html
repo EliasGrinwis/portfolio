@@ -7,57 +7,69 @@
     <title>Portfolio</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Mijn portfolio</h1>
-        <nav class="nav">
-          <i class="cross fa-solid fa-xmark"></i>
-          <ul class="ul">
-            <li style="text-decoration: underline">
-              <a href="index.html">Home</a>
-            </li>
-            <li><a href="about.html">Over mij</a></li>
-            <li><a href="projects.html">Projecten</a></li>
-          </ul>
-        </nav>
-        <i class="hamburger fa-solid fa-bars"></i>
-      </header>
-    </main>
-    <article class="article-index">
-      <p>
-        Welkom op mijn portfolio! Mijn naam is Elias Grinwis Plaat Stultjes, 19
-        jaar oud en studeer Toegepaste Informatica in Geel. Ik heb een passie
-        voor informatica. Mijn doel met deze portfolio is om mijn vaardigheden
-        en projecten te delen.
-      </p>
-      <div class="socials">
-        <p>
-          <a href="https://twitter.com/EliasGrinwis">
-            <i class="fa-brands fa-twitter cursor-pointer"></i>
-          </a>
-        </p>
-        <p>
-          <a href="https://github.com/EliasGrinwis">
-            <i class="fa-brands fa-github cursor-pointer"></i>
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/elias-grinwis-plaat-stultjes-86bb43220/"
-          >
-            <i class="fa-brands fa-linkedin cursor-pointer"></i>
-          </a>
-        </p>
+    <header>
+      <h1>Mijn portfolio</h1>
+      <nav class="navbar">
+        <ul class="links">
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="action_btn"><a href="about.html">Over mij</a></li>
+          <li class="action_btn"><a href="projects.html">Projecten</a></li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <div class="dropdown_menu">
+        <ul>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="action_btn"><a href="about.html">Over mij</a></li>
+          <li class="action_btn"><a href="projects.html">Projecten</a></li>
+        </ul>
       </div>
-    </article>
+    </header>
+
+    <main class="main-index">
+      <article id="hero">
+        <p>
+          Welkom op mijn portfolio! Mijn naam is Elias Grinwis Plaat Stultjes,
+          19 jaar oud en studeer Toegepaste Informatica in Geel. Ik heb een
+          passie voor informatica. Mijn doel met deze portfolio is om mijn
+          vaardigheden en projecten te delen.
+        </p>
+        <div class="socials">
+          <p>
+            <a href="https://twitter.com/EliasGrinwis">
+              <i class="fa-brands fa-twitter cursor-pointer"></i>
+            </a>
+          </p>
+          <p>
+            <a href="https://github.com/EliasGrinwis">
+              <i class="fa-brands fa-github cursor-pointer"></i>
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/elias-grinwis-plaat-stultjes-86bb43220/"
+            >
+              <i class="fa-brands fa-linkedin cursor-pointer"></i>
+            </a>
+          </p>
+        </div>
+      </article>
+    </main>
 
     <script src="main.js"></script>
   </body>

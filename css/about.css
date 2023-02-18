@@ -1,32 +1,30 @@
 /* ABOUT PAGE LAYOUT */
-
-html {
-  scroll-behavior: smooth !important;
-  overflow-y: scroll !important;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
-main {
-  max-width: 1000px;
-  height: 100vh;
-}
+/* HEADER LAYOUT IN STYLE.CSS */
 
-h2 {
-  color: chocolate;
-  text-decoration: underline;
+/* MAIN */
+main {
+  padding-bottom: 10px;
+  height: 82svh;
 }
 
 article {
   max-width: 1000px;
   width: 90%;
+  margin: auto;
+}
+
+h2 {
+  color: chocolate;
+  margin-bottom: 1rem;
+  text-decoration: underline;
 }
 
 .flex-parent {
   display: flex;
-  /* background-color: red; */
 }
 
 .flex-parent > * {
@@ -54,12 +52,9 @@ button {
   border-radius: 10px;
   font-size: 18px;
   color: white;
-  transition: all 0.5s;
-}
-
-button:hover {
+  transition: all 0.3s;
   cursor: pointer;
-  transform: translateY(-8px);
+  margin-top: 1rem;
 }
 
 .second-child img {
@@ -98,6 +93,7 @@ p {
   -webkit-transform: rotate(45deg);
 }
 
+/* RESPONSIVE DESIGN */
 @media screen and (max-width: 992px) {
   h2 {
     text-align: center;
@@ -115,11 +111,6 @@ p {
     text-align: center;
   }
 
-  article {
-    margin-top: 50px;
-    padding-bottom: 20px;
-  }
-
   .arrow {
     display: none;
   }
@@ -128,7 +119,6 @@ p {
 @media screen and (min-width: 992px) {
   article {
     width: 100%;
-    /* background-color: green; */
     position: absolute;
     top: 50%;
     left: 50%;

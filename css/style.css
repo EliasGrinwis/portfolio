@@ -1,32 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-html {
-  font-family: "Montserrat", sans-serif;
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
+  height: 100svh;
   font-size: 18px;
-  background-color: #100e17;
+  background-color: #000;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/achtergrond.jpg") center center no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  max-height: 100vh;
 }
 
-main {
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
+/* HEADER */
+header {
+  position: relative;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 1;
 }
 
 h1 {
@@ -35,7 +31,85 @@ h1 {
   color: white;
 }
 
-.article-index {
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 10rem;
+  list-style-type: none;
+}
+
+.navbar .links li {
+  color: white;
+}
+
+.navbar .links li a {
+  text-decoration: none;
+  color: chocolate;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 5.5rem;
+  right: 2rem;
+  left: 2rem;
+  height: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li {
+  color: white;
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu ul a {
+  color: chocolate;
+  text-decoration: none;
+}
+
+/* MAIN */
+.main-index {
   margin: auto;
   max-width: 800px;
   position: absolute;
@@ -43,10 +117,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-}
-
-article {
-  margin: auto;
+  padding: 20px;
 }
 
 p {
@@ -55,6 +126,7 @@ p {
 }
 
 .socials {
+  margin-top: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -76,120 +148,25 @@ p {
   border-radius: 50%;
 }
 
-.hamburger {
-  display: none;
-}
-
-.cross {
-  display: none;
-}
-
+/* RESPONSIVE DESIGN */
 @media screen and (max-width: 992px) {
-  .article-index {
-    max-width: 1000px;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav {
+  .navbar .links {
     display: none;
-    background-color: transparent;
-    box-shadow: chocolate 0px 30px 70px -20px,
-      rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
-
-    width: 100%;
-    z-index: 1;
-    position: relative;
   }
 
-  .blur {
-    filter: blur(5px);
-  }
-
-  nav ul {
-    list-style-type: none;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    margin: 20px;
-    text-align: center;
-    color: white;
-  }
-
-  nav ul li a {
-    color: white;
-    font-size: 35px;
-    text-decoration: none;
-  }
-
-  .cross {
-    font-size: 35px;
-    color: chocolate;
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    cursor: pointer;
-  }
-
-  .hamburger {
+  .navbar .toggle_btn {
     display: block;
-    color: chocolate;
-    font-size: 38px;
-    cursor: pointer;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .article-index {
-    max-width: 1000px;
   }
 
-  nav {
-    display: block !important;
+  .dropdown_menu {
+    display: block;
   }
 
-  nav ul li {
-    margin: 20px;
-  }
-
-  nav ul li a {
-    color: black !important;
-    font-size: 22px;
-  }
-
-  .hamburger {
-    display: none !important;
-  }
-
-  .cross {
-    display: none !important;
-  }
-
-  header nav ul {
+  .dropdown_menu.open {
+    height: 240px;
+    font-size: 30px;
     display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    color: white;
-  }
-
-  header nav ul li a {
-    color: chocolate !important;
-  }
-
-  a {
-    text-decoration: none !important;
-    font-weight: bold !important;
+    align-items: center;
+    justify-content: center;
   }
 }

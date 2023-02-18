@@ -7,8 +7,8 @@
     <title>Portfolio</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -17,23 +17,35 @@
     <link rel="stylesheet" href="css/resume.css" />
   </head>
   <body>
+    <header>
+      <h1>Mijn portfolio</h1>
+      <nav class="navbar">
+        <ul class="links">
+          <li class="action_btn">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="about.html">Over mij</a>
+          </li>
+          <li class="action_btn"><a href="projects.html">Projecten</a></li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <div class="dropdown_menu">
+        <ul>
+          <li class="action_btn"><a href="index.html">Home</a></li>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="about.html">Over mij</a>
+          </li>
+          <li class="action_btn"><a href="projects.html">Projecten</a></li>
+        </ul>
+      </div>
+    </header>
+
     <main>
-      <header>
-        <h1>Mijn portfolio</h1>
-        <nav class="nav">
-          <i class="cross fa-solid fa-xmark"></i>
-          <ul class="ul">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li style="text-decoration: underline">
-              <a href="about.html">Over mij</a>
-            </li>
-            <li><a href="projects.html">Projecten</a></li>
-          </ul>
-        </nav>
-        <i class="hamburger fa-solid fa-bars"></i>
-      </header>
       <article>
         <div class="flex-parent">
           <div class="first-child">
@@ -52,6 +64,7 @@
               <div class="buttonParent">
                 <a href="images/CV_eliasgrinwisplaatstultjes.pdf" download=""
                   ><button
+                    class="action_btn"
                     style="
                       box-shadow: chocolate 0px 30px 70px -20px,
                         rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
@@ -80,90 +93,93 @@
       ></a>
     </main>
 
-    <div id="resume">
-      <div class="full test">
-        <div class="left">
-          <div class="image">
-            <img
-              src="images/avatar.png"
-              alt="gfg-logo"
-              style="width: 100px; height: 100px"
-            />
-          </div>
-          <div class="Contact">
-            <h2>Contact</h2>
-            <div>
-              <p>
-                <i class="fa-regular fa-envelope"></i>
-                <span> eliasgrinwis27@gmail.com </span>
-              </p>
-              <p><i class="fa-solid fa-phone"></i>0492/86.90.82</p>
+    <div id="resume" class="main-resume">
+      <div>
+        <div class="full test">
+          <div class="left">
+            <div class="image">
+              <img
+                src="images/avatar.png"
+                alt="gfg-logo"
+                style="width: 100px; height: 100px"
+              />
+            </div>
+            <div class="Contact">
+              <h2>Contact</h2>
+              <div>
+                <p>
+                  <i class="fa-regular fa-envelope"></i>
+                  <span> eliasgrinwis27@gmail.com </span>
+                </p>
+                <p><i class="fa-solid fa-phone"></i>0492/86.90.82</p>
+              </div>
+            </div>
+            <div class="Skills">
+              <h2>Vaardigheden</h2>
+              <ul>
+                <li>Programmeer talen : Python, Java, C#, PHP</li>
+                <li>Frontend : HTML5, CSS3, JavaScript</li>
+                <li>Backend : Node.js</li>
+              </ul>
+            </div>
+            <div class="Language">
+              <h2>Talenkennis</h2>
+              <ul>
+                <li>Nederlands: zeer goed (moedertaal)</li>
+                <li>Engels: zeer goed</li>
+                <li>Frans: matig</li>
+                <li>Spaans: noties</li>
+              </ul>
+            </div>
+            <div class="Hobbies">
+              <h2>Hobbies</h2>
+              <ul>
+                <li>Gamen</li>
+              </ul>
             </div>
           </div>
-          <div class="Skills">
-            <h2>Vaardigheden</h2>
-            <ul>
-              <li>Programmeer talen : Python, Java, C#, PHP</li>
-              <li>Frontend : HTML5, CSS3, JavaScript</li>
-              <li>Backend : Node.js</li>
-            </ul>
-          </div>
-          <div class="Language">
-            <h2>Talenkennis</h2>
-            <ul>
-              <li>Nederlands: zeer goed (moedertaal)</li>
-              <li>Engels: zeer goed</li>
-              <li>Frans: matig</li>
-              <li>Spaans: noties</li>
-            </ul>
-          </div>
-          <div class="Hobbies">
-            <h2>Hobbies</h2>
-            <ul>
-              <li>Gamen</li>
-            </ul>
-          </div>
-        </div>
-        <div class="right">
-          <div class="name">
-            <h1>Elias Grinwis Plaat Stultjes</h1>
-          </div>
-          <div class="title">
-            <p>BACHELOR TOEGEPASTE INFORMATICA</p>
-          </div>
-          <div class="Summary">
-            <p>
-              Ik ben Elias Grinwis Plaat Stultjes, een enthousiaste tweedejaars
-              informatica student met ervaring in softwareontwikkeling,
-              data-analyse en webontwikkeling. Ik ben op zoek naar een
-              uitdagende stage of baan waar ik mijn vaardigheden verder kan
-              ontwikkelen en kan bijdragen aan innovatieve projecten.
-            </p>
-          </div>
-          <div class="Experience">
-            <h2>Werkervaring</h2>
-            <h3>Stagiair administratie</h3>
-            <p>Dakwerken SCV Nijlen (april 2021 - mei 2021)</p>
-            <ul>
-              <li>
-                Teamleader: klantenbestand aanvulllen met data, contacten
-                toevoegen
-              </li>
-              <li>BCT Capture: facturen inscannen en verwerken</li>
-              <li>Excel: berekeningen maken voor de werven</li>
-              <li>Mailbox opvolgen en spam verwijderen</li>
-              <li>Telefonisch contact met klanten</li>
-            </ul>
-          </div>
-          <div class="Education">
-            <h2>Persoonlijkevaardigheden</h2>
-            <ul>
-              <li>Communicatief</li>
-              <li>Betrouwbaar</li>
-              <li>Flexibel</li>
-              <li>Doorzetter</li>
-              <li>Teamplayer</li>
-            </ul>
+          <div class="right">
+            <div class="name">
+              <h1>Elias Grinwis Plaat Stultjes</h1>
+            </div>
+            <div class="title">
+              <p>BACHELOR TOEGEPASTE INFORMATICA</p>
+            </div>
+            <div class="Summary">
+              <p>
+                Ik ben Elias Grinwis Plaat Stultjes, een enthousiaste
+                tweedejaars informatica student met ervaring in
+                softwareontwikkeling, data-analyse en webontwikkeling. Ik ben op
+                zoek naar een uitdagende stage of baan waar ik mijn vaardigheden
+                verder kan ontwikkelen en kan bijdragen aan innovatieve
+                projecten.
+              </p>
+            </div>
+            <div class="Experience">
+              <h2>Werkervaring</h2>
+              <h3>Stagiair administratie</h3>
+              <p>Dakwerken SCV Nijlen (april 2021 - mei 2021)</p>
+              <ul>
+                <li>
+                  Teamleader: klantenbestand aanvulllen met data, contacten
+                  toevoegen
+                </li>
+                <li>BCT Capture: facturen inscannen en verwerken</li>
+                <li>Excel: berekeningen maken voor de werven</li>
+                <li>Mailbox opvolgen en spam verwijderen</li>
+                <li>Telefonisch contact met klanten</li>
+              </ul>
+            </div>
+            <div class="Education">
+              <h2>Persoonlijkevaardigheden</h2>
+              <ul>
+                <li>Communicatief</li>
+                <li>Betrouwbaar</li>
+                <li>Flexibel</li>
+                <li>Doorzetter</li>
+                <li>Teamplayer</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

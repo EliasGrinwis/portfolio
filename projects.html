@@ -16,57 +16,74 @@
     <link rel="stylesheet" href="css/projects.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Mijn portfolio</h1>
-        <nav class="nav">
-          <i class="cross fa-solid fa-xmark"></i>
-          <ul class="ul">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="about.html">Over mij</a>
-            </li>
-            <li style="text-decoration: underline">
-              <a href="projects.html">Projecten</a>
-            </li>
-          </ul>
-        </nav>
-        <i class="hamburger fa-solid fa-bars"></i>
-      </header>
-    </main>
-    <article class="index-article">
-      <h2>Mijn projecten</h2>
-      <div class="projects">
-        <div
-          class="project first-project"
-          style="
-            box-shadow: chocolate 0px 30px 70px -20px,
-              rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
-          "
-        >
-          <h3>Requirements Analysis</h3>
-          <div class="buttonParent">
-            <a href="projects/reqana.html">
-              <button>Meer informatie</button>
-            </a>
-          </div>
+    <header>
+      <h1>Mijn portfolio</h1>
+      <nav class="navbar">
+        <ul class="links">
+          <li class="action_btn">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="action_btn">
+            <a href="about.html">Over mij</a>
+          </li>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="projects.html">Projecten</a>
+          </li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <div
-          class="project second-project"
-          style="
-            box-shadow: chocolate 0px 30px 70px -20px,
-              rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
-          "
-        >
-          <h3>DevOps (ASP.NET WEB APP)</h3>
-          <div class="buttonParent">
-            <a href="projects/devops.html"><button>Meer informatie</button></a>
-          </div>
-        </div>
+      </nav>
+
+      <div class="dropdown_menu">
+        <ul>
+          <li class="action_btn"><a href="index.html">Home</a></li>
+          <li class="action_btn">
+            <a href="about.html">Over mij</a>
+          </li>
+          <li class="action_btn" style="text-decoration: underline">
+            <a href="projects.html">Projecten</a>
+          </li>
+        </ul>
       </div>
-    </article>
+    </header>
+
+    <main>
+      <article>
+        <h2>Mijn projecten</h2>
+        <div class="projects">
+          <div
+            class="project first-project"
+            style="
+              box-shadow: chocolate 0px 30px 70px -20px,
+                rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
+            "
+          >
+            <h3>Requirements Analysis</h3>
+            <div class="buttonParent">
+              <a href="projects/reqana.html">
+                <button>Meer informatie</button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="project second-project"
+            style="
+              box-shadow: chocolate 0px 30px 70px -20px,
+                rgba(8, 8, 8, 0.3) 0px 30px 60px -30px;
+            "
+          >
+            <h3>DevOps (ASP.NET WEB APP)</h3>
+            <div class="buttonParent">
+              <a href="projects/devops.html"
+                ><button>Meer informatie</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
     <script src="main.js"></script>
   </body>
 </html>
