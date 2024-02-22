@@ -24,18 +24,21 @@ export default function App() {
             <a
               href="https://www.linkedin.com/in/elias-grinwis-plaat-stultjes-86bb43220/"
               target="_blank"
+              rel="noreferrer"
               className="bg-primary p-2 rounded-full cursor-pointer">
               <Icon className="w-10 h-10 text-white" icon="mdi:linkedin" />
             </a>
             <a
               href="https://github.com/EliasGrinwis"
               target="_blank"
+              rel="noreferrer"
               className="bg-primary p-2 rounded-full cursor-pointer">
               <Icon className="w-10 h-10 text-white" icon="mdi:github" />
             </a>
             <a
               href="https://twitter.com/EliasGrinwis"
               target="_blank"
+              rel="noreferrer"
               className="bg-primary p-2 rounded-full cursor-pointer">
               <Icon className="w-10 h-10 text-white" icon="mdi:twitter" />
             </a>
