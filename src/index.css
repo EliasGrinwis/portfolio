@@ -14,15 +14,16 @@ body {
 
 ::-webkit-scrollbar {
   width: 12px;
+  background-color: #303846;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #05001f;
+  background: white;
   border-radius: 6px; /* half of the scrollbar width */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: gray;
 }

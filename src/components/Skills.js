@@ -48,7 +48,9 @@ export default function Skills() {
   const skills = Object.keys(skillImages);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div
+      id="skills"
+      className="flex flex-col lg:h-screen justify-center items-center p-3 lg:p-0">
       <div className="flex items-center justify-center mb-8">
         <div className="bg-primary p-2 rounded-xl mr-3">
           <Icon className="w-10 h-10 text-white" icon="fa-solid:laptop-code" />
