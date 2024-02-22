@@ -50,7 +50,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="flex flex-col lg:h-screen justify-center items-center p-3 lg:p-0">
+      className="flex flex-col lg:h-screen justify-center items-center py-20 p-3 bg-secondary">
       <div className="flex items-center justify-center mb-8">
         <div className="bg-primary p-2 rounded-xl mr-3">
           <Icon className="w-10 h-10 text-white" icon="fa-solid:laptop-code" />

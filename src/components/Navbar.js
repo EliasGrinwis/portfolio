@@ -3,7 +3,7 @@ import {HashLink} from "react-router-hash-link";
 
 export default function Navbar() {
   return (
-    <header className="w-full fixed top-0 left-0 z-40 bg-primary h-20 grid px-3">
+    <header className="w-full sticky top-0 left-0 z-40 bg-primary h-20 grid p-3">
       <nav className="w-full flex items-center justify-between container mx-auto">
         <div>
           <button className="text-white">Elias Grinwis Plaat Stultjes</button>

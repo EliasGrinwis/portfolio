@@ -106,8 +106,8 @@ const ProjectCard = ({project}) => {
 };
 
 const Projects = () => (
-  <div id="projects" className="bg-primary p-3 lg:p-0">
-    <div className="mx-auto container lg:h-screen flex flex-col items-center justify-center">
+  <div id="projects" className="bg-primary">
+    <div className="mx-auto container lg:h-screen py-20 p-3 flex flex-col items-center justify-center">
       <div className="flex items-center justify-center mb-8">
         <div className="bg-primary p-2 rounded-xl mr-3">
           <Icon className="w-10 h-10 text-white" icon="fa-solid:laptop-code" />

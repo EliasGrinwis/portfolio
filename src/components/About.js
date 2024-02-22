@@ -24,7 +24,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="h-screen bg-primary flex flex-col items-center justify-center p-3 lg:p-0">
+      className="h-screen bg-primary flex flex-col items-center justify-center p-3">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl text-center font-semibold text-white mb-4 ">
           About
