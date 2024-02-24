@@ -1,6 +1,6 @@
 # Elias Grinwis Plaat Stultjes Portfolio
 
-Welcome to the portfolio of Elias Grinwis Plaat Stultjes. This repository contains the source code for my personal website, showcasing my work, skills, and experiences in web development and design.
+Welcome to my portfolio. This repository contains the source code for my personal website, showcasing my work, skills, and experiences in web development and design.
 
 ## Features
 
@@ -14,8 +14,6 @@ Welcome to the portfolio of Elias Grinwis Plaat Stultjes. This repository contai
 - **React**: For building the user interface.
 - **Tailwind CSS**: For styling and responsiveness.
 
-## Contact
+## Visit My Website
 
-Elias Grinwis Plaat Stultjes - [@eliasgrinwis](https://twitter.com/EliasGrinwis) - eliasgrinwis27@gmail.com
-
-Project Link: [https://eliasgrinwis.be/](https://eliasgrinwis.be/)
+You can visit my portfolio website at [https://eliasgrinwis.be](https://eliasgrinwis.be).
