@@ -4,7 +4,7 @@ import {Icon} from "@iconify/react";
 
 import barometerImage from "../images/projects/thumbnailBarometer.png";
 import tripPlannerImage from "../images/projects/thumbnailTripPlanner.png";
-import spotifyImage from "../images/projects/thumbnailSpotify.png";
+import spotifyImage from "../images/projects/thumbnailSpotify.jpeg";
 
 const projects = [
   {

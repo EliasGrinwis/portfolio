@@ -1,5 +1,5 @@
 import {Icon} from "@iconify/react";
-import Avatar from "../images/avatar.png";
+import Avatar from "../images/avatar4.png";
 import {HashLink} from "react-router-hash-link";
 
 export default function Home() {
