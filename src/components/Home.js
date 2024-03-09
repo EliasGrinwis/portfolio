@@ -8,20 +8,20 @@ export default function Home() {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="md:w-1/2 mb-10 md:mb-0 text-center lg:text-start">
           <div className="mb-2">
-            <p className="text-sm text-gray-600">- Software developer</p>
+            <p className="text-sm text-gray-600">- Softwareontwikkelaar</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-800 mb-6">
-            Hi, I'm <span className="text-red-500">Elias</span>
+            Hallo, ik ben <span className="text-red-500">Elias</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8">
-            Welcome to my portfolio! Here, you'll find a detailed display of my
-            work. Explore the projects I've worked on to get a better
-            understanding of my professional journey and skills.
+            Welkom op mijn portfolio! Hier vind je een gedetailleerd overzicht
+            van mijn werk. Ontdek de projecten waar ik aan heb gewerkt om een
+            beter beeld te krijgen van mijn professionele reis en vaardigheden.
           </p>
           <HashLink
             to="#about"
             className="bg-primary hover:bg-opacity-60 transition-colors duration-300 px-4 py-2 inline-block rounded-md text-white font-semibold leading-tight">
-            Learn more About me
+            Meer over mij leren
           </HashLink>
           <div className="mt-4 flex items-center justify-center lg:justify-start gap-5">
             <SocialLink
@@ -38,6 +38,11 @@ export default function Home() {
               href="https://twitter.com/EliasGrinwis"
               icon="mdi:twitter"
               label="Twitter"
+            />
+            <SocialLink
+              href="mailto:eliasgrinwis27@gmail.com"
+              icon="material-symbols:mail-outline"
+              label="Mail"
             />
           </div>
         </div>

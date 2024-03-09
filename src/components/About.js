@@ -2,22 +2,22 @@ import CV from "../files/CV_Elias_Grinwis_Plaat_Stultjes.pdf";
 
 export default function About() {
   function handleDownload() {
-    // Create a dummy anchor element
+    // Maak een dummy anchor element aan
     const anchor = document.createElement("a");
 
-    // Set the href attribute to the URL of the file you want to download
+    // Stel het href-attribuut in op de URL van het bestand dat je wilt downloaden
     anchor.href = CV;
 
-    // Set the download attribute to specify the filename to be saved as
-    anchor.download = "resume.pdf";
+    // Stel het download-attribuut in om de bestandsnaam op te geven om opgeslagen te worden
+    anchor.download = "CV_Elias_Grinwis_Plaat_Stultjes.pdf";
 
-    // Append the anchor to the body
+    // Voeg de anchor toe aan de body
     document.body.appendChild(anchor);
 
-    // Programmatically trigger a click event on the anchor
+    // Programmeer een klikgebeurtenis op de anchor
     anchor.click();
 
-    // Remove the anchor from the body
+    // Verwijder de anchor uit de body
     document.body.removeChild(anchor);
   }
 
@@ -27,25 +27,28 @@ export default function About() {
       className="h-screen bg-primary flex flex-col items-center justify-center p-3">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl text-center font-semibold text-white mb-4 ">
-          About
-          <span className="text-red-500"> me</span>
+          Over<span className="text-red-500"> mij</span>
         </h2>
         <p className="text-md text-gray-300 mb-8">
-          I'm a last year student at Thomas More, studying computer science. I'm
-          passionate about Software development and constantly seek
-          opportunities to learn and grow in this field. Outside of academics, I
-          enjoy going for a walk. Feel free to explore my portfolio to learn
-          more about my projects and experiences.
+          Ik ben een laatstejaars student aan Thomas More, waar ik informatica
+          studeer. Ik ben gepassioneerd door softwareontwikkeling en zoek
+          voortdurend naar kansen om te leren en te groeien op dit gebied.
+          Buiten mijn studie geniet ik van wandelingen. Voel je vrij om mijn
+          portfolio te verkennen om meer te weten te komen over mijn projecten
+          en ervaringen.
         </p>
 
         <div className="flex items-center gap-3">
-          <button className="px-8 py-2 bg-white text-primary rounded-md">
-            Contact
-          </button>
+          <a href="mailto:eliasgrinwis27@gmail.com">
+            <button className="px-8 py-2 bg-white text-primary rounded-md">
+              Contact
+            </button>
+          </a>
+
           <button
             className="px-8 py-2 border border-white text-white rounded-md"
             onClick={handleDownload}>
-            Download resume
+            CV Downloaden
           </button>
         </div>
       </div>

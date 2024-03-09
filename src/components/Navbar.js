@@ -13,26 +13,28 @@ export default function Navbar() {
           <ul className="flex gap-5 pt-0">
             <li className="nav__item">
               <HashLink smooth to="#" className="relative text-white">
-                Home
+                HOME
               </HashLink>
             </li>
             <li className="nav__item">
               <HashLink smooth to="#about" className="relative text-white">
-                About
+                OVER MIJ
+              </HashLink>
+            </li>
+            <li className="nav__item">
+              <HashLink smooth to="#stage" className="relative text-white">
+                STAGE
               </HashLink>
             </li>
             <li className="nav__item">
               <HashLink smooth to="#skills" className="relative text-white">
-                Skills
+                SKILLS
               </HashLink>
             </li>
             <li className="nav__item">
               <HashLink smooth to="#projects" className="relative text-white">
-                Projects
+                REALISATIES
               </HashLink>
-            </li>
-            <li className="nav__item">
-              <button className="relative text-white">Contact</button>
             </li>
           </ul>
         </div>
