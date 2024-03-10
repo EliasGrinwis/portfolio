@@ -9,7 +9,7 @@ export default function About() {
     anchor.href = CV;
 
     // Stel het download-attribuut in om de bestandsnaam op te geven om opgeslagen te worden
-    anchor.download = "CV_Elias_Grinwis_Plaat_Stultjes.pdf";
+    anchor.download = "CV Elias Grinwis Plaat Stultjes";
 
     // Voeg de anchor toe aan de body
     document.body.appendChild(anchor);
