@@ -10,7 +10,12 @@ export default function Internship() {
 
   function handleDownload(documentType: string) {
     const anchor = document.createElement("a");
-    anchor.href = documentType === "Project Plan" ? "/project_plan.pdf" : "";
+    anchor.href =
+      documentType === "Project Plan"
+        ? "/project_plan.pdf"
+        : documentType === "Realistatie"
+        ? "/realisatie.pdf"
+        : "";
     anchor.download = documentType;
     document.body.appendChild(anchor);
     anchor.click();
@@ -93,7 +98,9 @@ export default function Internship() {
                 </li>
                 <li className="block sm:flex gap-10">
                   <p className="text-white w-28 font-semibold">Realisatie:</p>
-                  <div className="text-gray-400 hover:text-orange z-50 cursor-pointer flex items-center gap-3">
+                  <div
+                    className="text-gray-400 hover:text-orange z-50 cursor-pointer flex items-center gap-3"
+                    onClick={() => handleDownload("Realistatie")}>
                     <AnimatedBody
                       text="Documentatie van de realisatiefase"
                       className={"text-[16px] font-semibold"}
