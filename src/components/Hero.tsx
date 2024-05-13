@@ -4,6 +4,10 @@ import {monaSans} from "../app/fonts/monaSans";
 import {motion} from "framer-motion";
 import {imageAnimation, bodyAnimation} from "./animations/animations";
 import AnimatedWords from "./animations/AnimatedWords";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Hero = () => {
   return (
@@ -36,7 +40,7 @@ const Hero = () => {
             <motion.p
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}>
-              GH
+              <FontAwesomeIcon icon={faGithub} className="w-7 h-7" />
             </motion.p>
           </Link>
           <Link
@@ -46,7 +50,7 @@ const Hero = () => {
             <motion.p
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}>
-              LN
+              <FontAwesomeIcon icon={faLinkedin} className="w-7 h-7" />
             </motion.p>
           </Link>
           <Link
@@ -56,7 +60,7 @@ const Hero = () => {
             <motion.p
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}>
-              TW
+              <FontAwesomeIcon icon={faTwitter} className="w-7 h-7" />
             </motion.p>
           </Link>
         </div>

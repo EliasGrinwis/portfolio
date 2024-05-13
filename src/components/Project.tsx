@@ -111,18 +111,30 @@ export const ProjectCard = ({
           </>
         ) : (
           <div className=" flex items-center justify-center gap-4">
-            {github && (
-              <Link
-                href={github}
-                target="_blank"
-                className="mt-1 rounded-full z-50"
-                aria-label="Open GitHub Repository">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className=" w-[20px] hover:bg-black hover:text-white transition-all duration-300 cursor-pointer  rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                />
-              </Link>
-            )}
+            <Link
+              href={{
+                pathname: "/project",
+                query: {
+                  id: id,
+                  name: name,
+                  shortDescription: shortDescription,
+                  longDescription: longDescription,
+                  technologies: technologies,
+                  github: github,
+                  demo: demo,
+                  youtubeVideo: youtubeVideo,
+                  image: image,
+                  conclusion: conclusion,
+                  available: available,
+                  type: type,
+                },
+              }}
+              className="z-50">
+              <FontAwesomeIcon
+                icon={faInfo}
+                className=" w-[20px] hover:bg-black hover:text-white transition-all duration-300 cursor-pointer rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
+              />
+            </Link>
             <div className=" rounded-xl bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
               <h3 className="text-[16px] md:text-[18px] lg:text-[20px] ">
                 Binnenkort beschikbaar
