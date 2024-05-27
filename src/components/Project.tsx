@@ -202,33 +202,37 @@ const Project = () => {
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-5">
             <button
-              className={`bg-secondary  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
-                filter === "all" ? "bg-accent text-black" : "text-white"
+              className={`  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+                filter === "all"
+                  ? "bg-accent text-black"
+                  : "text-white bg-secondary"
               }`}
               onClick={() => handleFilterChange("all")}>
               Alle
             </button>
             <button
-              className={`bg-secondary  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+              className={`  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
                 filter === "Persoonlijk Project"
                   ? "bg-accent text-black"
-                  : "text-white"
+                  : "text-white bg-secondary"
               }`}
               onClick={() => handleFilterChange("Persoonlijk Project")}>
               Persoonlijk
             </button>
             <button
-              className={`bg-secondary  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+              className={`  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
                 filter === "Groeps Project"
                   ? "bg-accent text-black"
-                  : "text-white"
+                  : "text-white bg-secondary"
               }`}
               onClick={() => handleFilterChange("Groeps Project")}>
               Groeps
             </button>
             <button
-              className={`bg-secondary rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
-                filter === "Studie" ? "bg-accent text-black" : "text-white"
+              className={` rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+                filter === "Studie"
+                  ? "bg-accent text-black"
+                  : "text-white bg-secondary"
               }`}
               onClick={() => handleFilterChange("Studie")}>
               Studie
