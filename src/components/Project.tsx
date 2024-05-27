@@ -7,10 +7,12 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLink} from "@fortawesome/free-solid-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faInfo} from "@fortawesome/free-solid-svg-icons";
+
 import {motion} from "framer-motion";
 import AnimatedTitle from "./animations/AnimatedTitle";
 import AnimatedBody from "./animations/AnimatedBody";
 import {useHoverPosition} from "@/lib/hooks";
+import {useState} from "react";
 
 export const ProjectCard = ({
   id,
@@ -182,6 +184,13 @@ export const ProjectCard = ({
 };
 
 const Project = () => {
+  const [filter, setFilter] = useState("all");
+  const [gridLayout, setGridLayout] = useState("grid-cols-1");
+
+  const handleFilterChange = (filter: string) => {
+    setFilter(filter);
+  };
+
   return (
     <div id="projects" className="bg-primary py-24 p-3 w-full">
       <div className="mx-auto max-w-7xl container hidden-fade">
@@ -190,24 +199,62 @@ const Project = () => {
             <h1 className="text-center text-[#e4ded7]">PROJECTEN</h1>
           </div>
         </div>
+        <div className="flex items-center justify-between mb-5">
+          <div className="flex items-center gap-5">
+            <button
+              className={`bg-secondary  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+                filter === "all" ? "bg-accent text-black" : "text-white"
+              }`}
+              onClick={() => handleFilterChange("all")}>
+              Alle
+            </button>
+            <button
+              className={`bg-secondary  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+                filter === "Persoonlijk Project"
+                  ? "bg-accent text-black"
+                  : "text-white"
+              }`}
+              onClick={() => handleFilterChange("Persoonlijk Project")}>
+              Persoonlijk
+            </button>
+            <button
+              className={`bg-secondary  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+                filter === "Groeps Project"
+                  ? "bg-accent text-black"
+                  : "text-white"
+              }`}
+              onClick={() => handleFilterChange("Groeps Project")}>
+              Groeps
+            </button>
+            <button
+              className={`bg-secondary rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
+                filter === "Studie" ? "bg-accent text-black" : "text-white"
+              }`}
+              onClick={() => handleFilterChange("Studie")}>
+              Studie
+            </button>
+          </div>
+        </div>
         <div className="grid grid-cols-1 grid-rows-2 gap-y-10 gap-x-6 w-full lg:grid-cols-1">
-          {projects.map((project: ProjectProps) => (
-            <ProjectCard
-              id={project.id}
-              key={project.id}
-              name={project.name}
-              shortDescription={project.shortDescription}
-              longDescription={project.longDescription}
-              technologies={project.technologies}
-              github={project.github || ""}
-              demo={project.demo || ""}
-              youtubeVideo={project.youtubeVideo || ""}
-              image={project.image}
-              conclusion={project.conclusion}
-              available={project.available}
-              type={project.type}
-            />
-          ))}
+          {projects
+            .filter((project) => filter === "all" || project.type === filter)
+            .map((project: ProjectProps) => (
+              <ProjectCard
+                id={project.id}
+                key={project.id}
+                name={project.name}
+                shortDescription={project.shortDescription}
+                longDescription={project.longDescription}
+                technologies={project.technologies}
+                github={project.github || ""}
+                demo={project.demo || ""}
+                youtubeVideo={project.youtubeVideo || ""}
+                image={project.image}
+                conclusion={project.conclusion}
+                available={project.available}
+                type={project.type}
+              />
+            ))}
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed bottom-10 left-0 right-0 z-50 my-0   mx-auto  flex w-[420.3px] items-center justify-center gap-1 rounded-lg bg-[#07070a]/90 px-1 py-1 text-accent backdrop-blur-md sm:w-[520.3px] md:p-2 lg:w-[520.3px]">
+    <nav className="fixed bottom-10 left-0 right-0 z-50 my-0   mx-auto  flex w-[320.3px] items-center justify-center gap-1 rounded-lg bg-[#07070a]/90 px-1 py-1 text-accent backdrop-blur-md sm:w-[420.3px] md:p-2 lg:w-[420.3px]">
       <Link
         href="/CV_Elias_Grinwis_Plaat_Stultjes.pdf"
         target="_blank"
@@ -65,14 +65,14 @@ const NavBar = () => {
         </h4>
       </Link>
 
-      <Link
+      {/* <Link
         href="#contact"
         onClick={handleScroll}
         aria-label="Scroll to Contact Section">
         <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4 hover:bg-accent hover:text-black transition-all duration-300">
           Contact
         </h4>
-      </Link>
+      </Link> */}
     </nav>
   );
 };

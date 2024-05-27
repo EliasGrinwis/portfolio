@@ -62,7 +62,7 @@ export default function Home() {
         <About />
         <Internship />
         <Project />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
         <div className="hidden md:block">
           <ScrollToTopButton />
