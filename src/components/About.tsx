@@ -10,6 +10,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import AnimatedTitle from "./animations/AnimatedTitle";
 import AnimatedBody from "./animations/AnimatedBody";
+import Skill from "./Skill";
 
 type SocialLinkProps = {
   href: string;
@@ -121,6 +122,19 @@ export default function About() {
           </div>
         </div>
       </div>
+      <section className="relative z-10 w-full items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-16 pb-36 md:pt-20 md:pb-44 lg:pt-20 lg:pb-56">
+        <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
+          <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
+            <div className="mt-10 flex flex-col md:-mt-0 lg:mt-28">
+              <Skill />
+              <AnimatedBody
+                text="Hier zijn enkele van mijn vaardigheden en technologieën waar ik graag mee werk."
+                className="absolute bottom-10 right-0 left-0 mx-auto w-[90%] text-center text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[500px] md:bottom-12 md:w-[550px] md:text-[16px] "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

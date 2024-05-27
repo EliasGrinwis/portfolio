@@ -13,6 +13,81 @@ export type ProjectProps = {
   type: string;
 };
 
+export const skills = [
+  {
+    title: "Angular",
+    image: require(".//../../public/skills/angular.png"),
+  },
+  {
+    title: "ASP.NET",
+    image: require(".//../../public/skills/aspnet.png"),
+  },
+  {
+    title: "Azure",
+    image: require(".//../../public/skills/azure.png"),
+  },
+  {
+    title: "Bootstrap",
+    image: require(".//../../public/skills/bootstrap.png"),
+  },
+  {
+    title: "CSS",
+    image: require(".//../../public/skills/css.png"),
+  },
+  {
+    title: "Firebase",
+    image: require(".//../../public/skills/firebase.png"),
+  },
+  {
+    title: "Flutter",
+    image: require(".//../../public/skills/flutter.png"),
+  },
+  {
+    title: "Github",
+    image: require(".//../../public/skills/github.png"),
+  },
+  {
+    title: "HTML",
+    image: require(".//../../public/skills/html.png"),
+  },
+  {
+    title: "Java",
+    image: require(".//../../public/skills/java.png"),
+  },
+  {
+    title: "JavaScript",
+    image: require(".//../../public/skills/javascript.png"),
+  },
+  {
+    title: "Laravel",
+    image: require(".//../../public/skills/laravel.png"),
+  },
+  {
+    title: "MYSQL",
+    image: require(".//../../public/skills/mysql.png"),
+  },
+  {
+    title: "Netlify",
+    image: require(".//../../public/skills/netlify.png"),
+  },
+  {
+    title: "Python",
+    image: require(".//../../public/skills/python.png"),
+  },
+  {
+    title: "React",
+    image: require(".//../../public/skills/react.png"),
+  },
+  {
+    title: "Sass",
+    image: require(".//../../public/skills/sass.png"),
+  },
+  {
+    title: "Tailwindcss",
+    image: require(".//../../public/skills/tailwindcss.png"),
+  },
+];
+
 export const projects = [
   {
     id: 0,

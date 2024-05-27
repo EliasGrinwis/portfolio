@@ -60,7 +60,7 @@ const Hero = () => {
             <motion.p
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}>
-              <FontAwesomeIcon icon={faTwitter} className="w-7 h-7" />
+              <FontAwesomeIcon icon={faTwitter} className="w-7 h-7 " />
             </motion.p>
           </Link>
         </div>

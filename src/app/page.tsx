@@ -8,6 +8,7 @@ import Internship from "@/components/Internship";
 import Project from "@/components/Project";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   useEffect(() => {
@@ -61,8 +62,11 @@ export default function Home() {
         <About />
         <Internship />
         <Project />
+        <Contact />
         <Footer />
-        <ScrollToTopButton />
+        <div className="hidden md:block">
+          <ScrollToTopButton />
+        </div>
       </main>
     </>
   );

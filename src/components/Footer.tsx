@@ -1,62 +1,32 @@
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import {faTwitter} from "@fortawesome/free-brands-svg-icons";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {faCopyright} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import {motion} from "framer-motion";
+import AnimatedBody from "./animations/AnimatedBody";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-primary w-full relative text-white p-3">
-      <div className="max-w-7xl mx-auto container bg-secondary rounded-xl py-3 px-6">
-        <div className="flex items-center justify-between w-full">
-          <div className="flex items-center w-full">
-            <FontAwesomeIcon
-              icon={faCopyright}
-              className="text-xl text-white"
-            />
-            <h4 className="font-semibold ml-3">Elias Grinwis Plaat Stultjes</h4>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="https://www.linkedin.com/in/elias-grinwis-plaat-stultjes-86bb43220/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn">
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="w-7 h-7 cursor-pointer"
+    <motion.section
+      className=" h-[15vh] w-full  items-center justify-center border-t-2 border-[#e4ded7]/30 bg-[#0E1016] pt-10  font-bold uppercase md:h-[20vh] md:py-16 lg:h-[10vh] lg:pt-6 lg:pb-0"
+      initial="initial"
+      animate="animate">
+      <motion.div className="mx-auto flex w-[90%] flex-row items-center justify-between text-center text-[12px] text-[#e4ded7] sm:text-[12px] md:text-[14px] lg:max-w-[1440px] lg:text-[14px]">
+        <AnimatedBody text={"Copyright 2024"} className={"m-0 p-0"} />
+        <div className="flex flex-col sm:flex-row  sm:gap-1 md:gap-2">
+          <AnimatedBody text={"Ontwikkeld door"} className={"m-0 p-0"} />
+          <Link
+            href="https://github.com/EliasGrinwis"
+            target="_blank"
+            aria-label="Elias's GitHub Profile">
+            <span className="underline underline-offset-2 hover:no-underline">
+              <AnimatedBody
+                text={"Elias Grinwis Plaat Stultjes"}
+                className={"m-0 p-0"}
               />
-            </a>
-            <a
-              href="https://github.com/EliasGrinwis"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Github">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="w-7 h-7 cursor-pointer"
-              />
-            </a>
-            <a
-              href="https://twitter.com/EliasGrinwis"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Twitter">
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className="w-7 h-7 cursor-pointer"
-              />
-            </a>
-            <a href="mailto:eliasgrinwis27@gmail.com" aria-label="Email">
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className="w-7 h-7 cursor-pointer"
-              />
-            </a>
-          </div>
+            </span>
+          </Link>
         </div>
-      </div>
-    </footer>
+      </motion.div>
+    </motion.section>
   );
-}
+};
+
+export default Footer;
