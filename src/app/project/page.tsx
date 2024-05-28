@@ -111,7 +111,7 @@ export default function ProjectDetail({
           </div>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-8">
           <h2 className="text-[14px] font-bold uppercase md:text-[16px] text-white lg:text-[18px]">
             Project Beschrijving
           </h2>
@@ -124,13 +124,29 @@ export default function ProjectDetail({
           </div>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-8">
           <h2 className="text-[14px] font-bold uppercase md:text-[16px] text-white lg:text-[18px]">
             Conclusie
           </h2>
           <p className="mt-4 text-[16px] font-semibold text-[#95979D]">
             {searchParams.conclusion}
           </p>
+        </div>
+        <div className="mb-4 flex items-center gap-5">
+          {searchParams.demo && (
+            <button
+              className="bg-secondary text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-accent hover:text-secondary"
+              onClick={() => router.push(searchParams.demo)}>
+              Demo
+            </button>
+          )}
+          {searchParams.github && (
+            <button
+              className="bg-secondary text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-accent hover:text-secondary"
+              onClick={() => router.push(searchParams.github)}>
+              Github
+            </button>
+          )}
         </div>
       </div>
     </div>

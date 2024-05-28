@@ -142,6 +142,8 @@ export const projects = [
     github: "https://github.com/EliasGrinwis/spotify-clone",
     demo: "",
     image: "/projects/spotify.webp",
+    youtubeVideo:
+      "https://www.youtube.com/embed/j0cCUH4aFPY?si=oURf7SM02wBnhWeX",
     conclusion:
       "Het ontwikkelen van het Spotify Clone-project was een leerzaam avontuur dat mijn vaardigheden in webontwikkeling aanzienlijk heeft verbeterd. Het heeft me niet alleen geholpen om meer inzicht te krijgen in de implementatie van complexe functies, maar ook om mijn creativiteit en probleemoplossend vermogen te stimuleren. Ik ben trots op wat ik heb bereikt met deze applicatie en kijk ernaar uit om mijn vaardigheden verder te ontwikkelen in toekomstige projecten.",
     available: false,

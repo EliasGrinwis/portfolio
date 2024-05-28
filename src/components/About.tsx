@@ -6,6 +6,7 @@ import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
+import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import AnimatedTitle from "./animations/AnimatedTitle";
@@ -65,7 +66,7 @@ export default function About() {
               } as React.CSSProperties
             }
             className="card row-span-1 md:row-span-2 lg:row-span-4 col-span-1 lg:col-span-3 bg-secondary rounded-xl p-6 flex flex-col justify-between items-start">
-            <div className="text-justify">
+            <div className="text-justify mb-4">
               <AnimatedTitle
                 text={"Wie ben ik?"}
                 wordSpace={"mr-[0.25em]"}
@@ -83,6 +84,30 @@ export default function About() {
                   leerkansen."
                 className={"mt-4 text-[16px] font-semibold text-[#95979D] "}
               />
+            </div>
+            <div className="w-full">
+              <ul className="w-full grid grid-cols-3">
+                <li className="text-accent flex items-center gap-3">
+                  <FontAwesomeIcon icon={faCheck} className="w-5 h-5" />
+                  <span>Rijbewijs</span>
+                </li>
+                <li className="text-accent flex items-center gap-3">
+                  <FontAwesomeIcon icon={faCheck} className="w-5 h-5" />
+                  <span>Leeftijd: 20 jaar</span>
+                </li>
+                <li className="text-accent flex items-center gap-3">
+                  <FontAwesomeIcon icon={faCheck} className="w-5 h-5" />
+                  <span>Beroep: Student</span>
+                </li>
+                <li className="text-accent flex items-center gap-3">
+                  <FontAwesomeIcon icon={faCheck} className="w-5 h-5" />
+                  <span>Woonplaats: Nijlen</span>
+                </li>
+                <li className="text-accent flex items-center gap-3">
+                  <FontAwesomeIcon icon={faCheck} className="w-5 h-5" />
+                  <span>Hogeschool: Thomas More</span>
+                </li>
+              </ul>
             </div>
             <button
               className="z-50 mt-6 px-4 py-2 bg-orange text-black hover:bg-white  transition duration-300 rounded-md flex items-center gap-2"
