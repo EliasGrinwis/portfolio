@@ -11,6 +11,7 @@ export type ProjectProps = {
   conclusion: string;
   available: boolean;
   type: string;
+  gridLayout?: string;
 };
 
 export const skills = [
@@ -103,6 +104,8 @@ export const projects = [
     ],
     technologies: ["React", "Tailwind CSS", "ASP.NET"],
     image: "/projects/barometer.webp",
+    youtubeVideo:
+      "https://www.youtube.com/embed/lN8ehgiOM3Q?si=ibnonMw4gxZYe_Pp",
     conclusion:
       "Ik vond dit project zeer leerzaam. Het bood niet alleen inzicht in de technologieën die we hebben toegepast, maar ook in het samenwerken in een team. Het was een waardevolle ervaring en ik ben trots op wat we hebben bereikt.",
     available: true,
@@ -159,6 +162,46 @@ export const projects = [
     image: "/projects/kinepolis.webp",
     conclusion:
       "Dit project heeft mijn kennis van Auth0 en Tailwind CSS verrijkt en heeft me de kans geboden om te experimenteren met React Vite. Ik ben trots op wat ik met deze app heb bereikt en kijk ernaar uit om mijn vaardigheden te blijven ontwikkelen in mijn toekomstige projecten",
+    available: true,
+    type: "Persoonlijk Project",
+  },
+  {
+    id: 4,
+    name: "Microservices",
+    shortDescription:
+      "Een hotel applicatie waarmee je eenvoudig kunt bekijken welke hotels er zijn en welke kamers beschikbaar zijn.",
+    longDescription: [
+      "In dit project heb ik voor het eerst gewerkt met microservices in Java, een architecturale benadering waarbij een applicatie wordt opgedeeld in kleinere, onafhankelijk schaalbare services die samenwerken om de functionaliteit te bieden. Het doel was om de complexiteit te verminderen, de flexibiliteit te vergroten en het onderhoud te vereenvoudigen. Door gebruik te maken van microservices kon ik verschillende aspecten van de hotelapplicatie isoleren en onafhankelijk ontwikkelen, wat resulteerde in een modulaire en schaalbare oplossing. Dit omvatte onder meer het beheer van hotels, kamers en beschikbaarheid, waardoor gebruikers eenvoudig konden zoeken en reserveren.",
+      "Het project omvatte een combinatie van backend- en frontend-technologieën. Voor de backend heb ik Java gebruikt, een krachtige en veelzijdige programmeertaal die goed geschikt is voor het bouwen van schaalbare en betrouwbare microservices. Voor de frontend heb ik React gebruikt, een populaire JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces. Daarnaast heb ik Firebase gebruikt om de frontend te hosten.",
+      "",
+    ],
+    technologies: ["Java", "React", "Firebase"],
+    github: "https://github.com/EliasGrinwis/microservices",
+    demo: "",
+    image: "/projects/microservices.png",
+    youtubeVideo:
+      "https://www.youtube.com/embed/rvo2hEZkk24?si=-diE7E6EpxIe3qvL",
+    conclusion:
+      "Dit project vond ik heel intressant om aan te werken. Ik heb veel geleerd over microservices en hoe je ze kan implementeren. Ik ben trots op het eindresultaat.",
+    available: true,
+    type: "Persoonlijk Project",
+  },
+  {
+    id: 5,
+    name: "Data Visualisation",
+    shortDescription:
+      "Een dashboard dat eenvoudig inzicht geeft in de huidige toestand van bossen over de hele wereld.",
+    longDescription: [
+      "Dit project was mijn eerste kennismaking met Qlik sense. Dit was een schoolopdracht waarin ik zelf een dashboard moest maken. Ik vond het persoonlijk heel intressant om voor het onderwerp 'Bossen' te gaan. Ik heb veel geleerd over de huidige toestand van bossen over de hele wereld.",
+      "",
+    ],
+    technologies: ["Qlik sense", "Analyseren", "Grafieken"],
+    demo: "",
+    image: "/projects/data_visualisation.png",
+    youtubeVideo:
+      "https://www.youtube.com/embed/e3L-dyO5N2c?si=3TDqPqcMBUMGEV9l",
+    conclusion:
+      "Dit project heeft mijn kennis in data visualisation verbeterd. Ik vond het persoonlijk een heel leuk project om aan te werken. Ik kon mijn eigen thema kiezen en mijn creatieve kant laten zien. Ik ben trots op het eindresultaat.",
     available: true,
     type: "Persoonlijk Project",
   },

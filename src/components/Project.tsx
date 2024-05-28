@@ -4,7 +4,7 @@ import {ProjectProps, projects} from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLink} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRight, faLink} from "@fortawesome/free-solid-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faInfo} from "@fortawesome/free-solid-svg-icons";
 
@@ -13,6 +13,69 @@ import AnimatedTitle from "./animations/AnimatedTitle";
 import AnimatedBody from "./animations/AnimatedBody";
 import {useHoverPosition} from "@/lib/hooks";
 import {useState} from "react";
+
+export const ProjectCardSmall = ({
+  id,
+  name,
+  shortDescription,
+  longDescription,
+  technologies,
+  github,
+  demo,
+  youtubeVideo,
+  image,
+  conclusion,
+  available,
+  type,
+}: ProjectProps) => {
+  return (
+    <div className="relative flex h-[430px] w-[100%] max-w-[400px] flex-col items-center justify-start rounded-2xl bg-[#212531]">
+      <div className="mt-4 h-[100%] w-[90%] lg:mt-5 lg:w-[92%]">
+        <div className="h-[60%] w-full md:h-[56%]">
+          <Image
+            src={image}
+            alt={name}
+            width={1600}
+            height={840}
+            className="h-full w-full rounded-lg bg-contain bg-center object-cover"
+          />
+        </div>
+
+        <h3 className="mt-5 break-all uppercase leading-[1em] tracking-tight line-clamp-2 text-accent">
+          {name}
+        </h3>
+      </div>
+
+      <div className="absolute bottom-0 mb-5 flex w-[90%] items-center justify-between text-[14px] font-bold text-[#95979D]">
+        <p>{type}</p>
+        <Link
+          href={{
+            pathname: "/project",
+            query: {
+              id: id,
+              name: name,
+              shortDescription: shortDescription,
+              longDescription: longDescription,
+              technologies: technologies,
+              github: github,
+              demo: demo,
+              youtubeVideo: youtubeVideo,
+              image: image,
+              conclusion: conclusion,
+              available: available,
+              type: type,
+            },
+          }}
+          className="rounded-full">
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            className=" w-[16px] rounded-full bg-[#0E1016] p-3 text-[16px] text-[#fff] md:w-[20px] md:text-[20px] lg:w-[18px] lg:p-4 lg:text-[18px] hover:bg-accent transition-all duration-300 hover:text-primary"
+          />
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 export const ProjectCard = ({
   id,
@@ -200,7 +263,7 @@ const Project = () => {
           </div>
         </div>
         <div className="flex items-center justify-between mb-5">
-          <div className="flex items-center gap-5">
+          <div className="flex items-center flex-wrap gap-5">
             <button
               className={`  rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
                 filter === "all"
@@ -228,36 +291,67 @@ const Project = () => {
               onClick={() => handleFilterChange("Groeps Project")}>
               Groeps
             </button>
+          </div>
+          <div className="flex items-center gap-5">
             <button
-              className={` rounded-lg p-1 w-24 hover:bg-accent transition-all duration-300 hover:text-black ${
-                filter === "Studie"
-                  ? "bg-accent text-black"
-                  : "text-white bg-secondary"
-              }`}
-              onClick={() => handleFilterChange("Studie")}>
-              Studie
+              className="text-white border w-7 h-7"
+              onClick={() => setGridLayout("grid-cols-1")}></button>
+
+            <button
+              className="text-white"
+              onClick={() => setGridLayout("grid-cols-3")}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 16 16"
+                fill="#FFFFFF"
+                className="w-7 h-7">
+                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4h4V6H6v4zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0v4h4v-4H6zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0V1H6v4h4z" />
+              </svg>
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-1 grid-rows-2 gap-y-10 gap-x-6 w-full lg:grid-cols-1">
+        <div
+          className={`grid grid-cols-1 grid-rows-2 gap-y-10 gap-x-6 w-full transition-all duration-500 ${gridLayout}`}>
           {projects
             .filter((project) => filter === "all" || project.type === filter)
             .map((project: ProjectProps) => (
-              <ProjectCard
-                id={project.id}
-                key={project.id}
-                name={project.name}
-                shortDescription={project.shortDescription}
-                longDescription={project.longDescription}
-                technologies={project.technologies}
-                github={project.github || ""}
-                demo={project.demo || ""}
-                youtubeVideo={project.youtubeVideo || ""}
-                image={project.image}
-                conclusion={project.conclusion}
-                available={project.available}
-                type={project.type}
-              />
+              <>
+                {gridLayout !== "grid-cols-1" ? (
+                  <ProjectCardSmall
+                    id={project.id}
+                    key={project.id}
+                    name={project.name}
+                    shortDescription={project.shortDescription}
+                    longDescription={project.longDescription}
+                    technologies={project.technologies}
+                    github={project.github || ""}
+                    demo={project.demo || ""}
+                    youtubeVideo={project.youtubeVideo || ""}
+                    image={project.image}
+                    conclusion={project.conclusion}
+                    available={project.available}
+                    type={project.type}
+                  />
+                ) : (
+                  <ProjectCard
+                    id={project.id}
+                    key={project.id}
+                    name={project.name}
+                    shortDescription={project.shortDescription}
+                    longDescription={project.longDescription}
+                    technologies={project.technologies}
+                    github={project.github || ""}
+                    demo={project.demo || ""}
+                    youtubeVideo={project.youtubeVideo || ""}
+                    image={project.image}
+                    conclusion={project.conclusion}
+                    available={project.available}
+                    type={project.type}
+                  />
+                )}
+              </>
             ))}
         </div>
       </div>

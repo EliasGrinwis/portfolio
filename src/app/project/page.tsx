@@ -70,11 +70,14 @@ export default function ProjectDetail({
       <div className="cursor-outline" ref={cursorOutlineRef}></div>
 
       <div className="container mx-auto max-w-6xl p-6 lg:p-6 z-10">
+        <p>{searchParams.youtubeVideo}</p>
         {searchParams.youtubeVideo ? (
           <iframe
-            className="w-full h-full"
+            width="560"
+            height="315"
             src={searchParams.youtubeVideo}
-            title={searchParams.name}
+            title="YouTube video player"
+            className="w-full h-[315px] lg:h-[560px] rounded-xl"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         ) : (
           <Image
