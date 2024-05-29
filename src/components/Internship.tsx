@@ -57,7 +57,7 @@ export default function Internship() {
                   text="Tijdens mijn stage bij Team4Talent heb ik gewerkt aan twee
                         bestaande applicaties: Talent Manager en de MyPortal
                         applicatie. Mijn focus lag voornamelijk op het implementeren
-                        van een belangrijke functionaliteit genaamd course management."
+                        van een nieuwe feature genaamd course management."
                   className={"mt-4 text-[16px] font-semibold text-[#95979D] "}
                 />
                 <AnimatedBody
