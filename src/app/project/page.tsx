@@ -137,7 +137,7 @@ export default function ProjectDetail({
             <button
               className="bg-secondary text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-accent hover:text-secondary"
               onClick={() => router.push(searchParams.demo)}>
-              Demo
+              Website
             </button>
           )}
           {searchParams.github && (

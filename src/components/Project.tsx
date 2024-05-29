@@ -4,10 +4,14 @@ import {ProjectProps, projects} from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowRight, faLink} from "@fortawesome/free-solid-svg-icons";
+import {
+  faThLarge,
+  faArrowRight,
+  faLink,
+  faThList,
+} from "@fortawesome/free-solid-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faInfo} from "@fortawesome/free-solid-svg-icons";
-
 import {motion} from "framer-motion";
 import AnimatedTitle from "./animations/AnimatedTitle";
 import AnimatedBody from "./animations/AnimatedBody";
@@ -292,23 +296,27 @@ const Project = () => {
               Groeps
             </button>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center space-x-4">
             <button
-              className="text-white border w-7 h-7"
-              onClick={() => setGridLayout("grid-cols-1")}></button>
+              className={`p-2  ${
+                gridLayout === "grid-cols-1"
+                  ? "bg-accent text-black"
+                  : "bg-secondary text-white"
+              } hover:bg-accent  hover:text-black transition-all rounded-lg flex items-center justify-center duration-300`}
+              onClick={() => setGridLayout("grid-cols-1")}
+              title="Change to single column layout">
+              <FontAwesomeIcon icon={faThList} className="w-5 h-5" />
+            </button>
 
             <button
-              className="text-white"
-              onClick={() => setGridLayout("grid-cols-3")}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="800px"
-                height="800px"
-                viewBox="0 0 16 16"
-                fill="#FFFFFF"
-                className="w-7 h-7">
-                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4h4V6H6v4zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0v4h4v-4H6zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0V1H6v4h4z" />
-              </svg>
+              className={`p-2 ${
+                gridLayout === "grid-cols-3"
+                  ? "bg-accent text-black"
+                  : "bg-secondary text-white"
+              } hover:bg-accent hover:text-black transition-all rounded-lg flex items-center justify-center duration-300`}
+              onClick={() => setGridLayout("grid-cols-3")}
+              title="Change to three columns layout">
+              <FontAwesomeIcon icon={faThLarge} className="w-5 h-5" />
             </button>
           </div>
         </div>
