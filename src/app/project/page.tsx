@@ -77,6 +77,7 @@ export default function ProjectDetail({
             height="315"
             src={searchParams.youtubeVideo}
             title="YouTube video player"
+            allowFullScreen
             className="w-full h-[315px] lg:h-[560px] rounded-xl"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         ) : (

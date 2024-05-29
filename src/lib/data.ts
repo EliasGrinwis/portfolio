@@ -124,6 +124,8 @@ export const projects = [
     technologies: ["Angular", "Tailwind CSS", "ASP.NET"],
     demo: "https://trip-planner-46730.web.app/",
     image: "/projects/tripplanner.webp",
+    youtubeVideo:
+      "https://www.youtube.com/embed/y2wDPSJ2_HE?si=jK27ohKZFo8xkZIc",
     conclusion:
       "Het werken aan TripPlanner heeft mijn samenwerkingsvaardigheden, kennis van Angular en algemene softwareontwikkeling enorm versterkt. Ik kijk met veel voldoening terug op dit project en ben enthousiast om mijn leertraject voort te zetten in toekomstige projecten.",
     available: true,
