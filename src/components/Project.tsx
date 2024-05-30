@@ -32,8 +32,23 @@ export const ProjectCardSmall = ({
   available,
   type,
 }: ProjectProps) => {
+  const {mousePosition, handleMouseOver} = useHoverPosition(); // custom hook
+
   return (
-    <div className="relative flex h-[430px] w-[100%] max-w-[400px] flex-col items-center justify-start rounded-2xl bg-[#212531]">
+    <motion.div
+      style={
+        {
+          backgroundColor: "#212531",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          position: "relative",
+          "--mouse-x": `${mousePosition.x}px`,
+          "--mouse-y": `${mousePosition.y}px`,
+        } as React.CSSProperties
+      }
+      onMouseMove={handleMouseOver}
+      className="card z-10 relative flex h-[430px] w-full  flex-col items-center justify-start rounded-2xl">
       <div className="mt-4 h-[100%] w-[90%] lg:mt-5 lg:w-[92%]">
         <div className="h-[60%] w-full md:h-[56%]">
           <Image
@@ -70,14 +85,14 @@ export const ProjectCardSmall = ({
               type: type,
             },
           }}
-          className="rounded-full">
+          className="rounded-full z-50">
           <FontAwesomeIcon
             icon={faArrowRight}
             className=" w-[16px] rounded-full bg-[#0E1016] p-3 text-[16px] text-[#fff] md:w-[20px] md:text-[20px] lg:w-[18px] lg:p-4 lg:text-[18px] hover:bg-accent transition-all duration-300 hover:text-primary"
           />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
