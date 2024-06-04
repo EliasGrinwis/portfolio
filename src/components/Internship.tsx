@@ -133,6 +133,22 @@ export default function Internship() {
               />
             </div>
           </div>
+
+          <div className="mt-20">
+            <AnimatedBody
+              text="In deze demo presenteer ik mijn werkzaamheden tijdens mijn stage"
+              className="mb-12 mx-auto w-[90%] text-center text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[500px] md:bottom-12 md:w-[550px] md:text-[16px] "
+            />
+
+            <iframe
+              width="384"
+              height="315"
+              src="https://www.youtube.com/embed/vzJS67CeiAs?si=qowJjR6pX_lasqKh"
+              title="YouTube video player"
+              allowFullScreen
+              className="w-full h-[315px] lg:h-[560px] rounded-xl"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          </div>
         </div>
       </div>
     </div>
