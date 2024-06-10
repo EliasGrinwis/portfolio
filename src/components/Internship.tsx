@@ -15,6 +15,8 @@ export default function Internship() {
         ? "/project_plan.pdf"
         : documentType === "Realistatie"
         ? "/realisatie.pdf"
+        : documentType === "Reflectie"
+        ? "/reflectie.pdf"
         : "";
     anchor.download = documentType;
     document.body.appendChild(anchor);
@@ -111,7 +113,9 @@ export default function Internship() {
                 <li className="block sm:flex gap-10">
                   <p className="text-white w-28 font-semibold">Reflectie:</p>
 
-                  <div className="text-gray-400 hover:text-orange z-50 cursor-pointer flex items-center gap-3">
+                  <div
+                    className="text-gray-400 hover:text-orange z-50 cursor-pointer flex items-center gap-3"
+                    onClick={() => handleDownload("Reflectie")}>
                     <AnimatedBody
                       text="Reflectie over de stageperiode"
                       className={"text-[16px] font-semibold"}
